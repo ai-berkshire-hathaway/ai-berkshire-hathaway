@@ -2,7 +2,7 @@
 
 A cross-chain, AI-driven dollar-cost-averaging (DCA) vault that lives on **Circle Arc** and trades BTC on **Base** using **USDC**, **Pyth price feeds**, and **Circle CCTP**.
 
-## 1. What This Project Is
+## 1. What Is AI Berkshire Hathaway
 
 ### Goal
 
@@ -249,3 +249,4 @@ pnpm dev       # or npm run dev
 * Implement real Base swap logic in `baseTrader.ts`.
 * Connect backend to a live Postgres instance in `db.ts`.
 * Harden error handling and retries around cross-chain execution.
+
