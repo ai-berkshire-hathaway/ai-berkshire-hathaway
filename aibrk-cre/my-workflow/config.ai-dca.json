@@ -1,0 +1,22 @@
+{
+  "schedule": "*/10 * * * *",
+  "porUrl": "https://api.real-time-reserves.verinumus.io/v1/chainlink/proof-of-reserves/TrueUSD",
+  "btcPriceUrl": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true",
+  "coinGeckoUrl": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true",
+  "binanceUrl": "https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT",
+  "aiAnalysisUrl": "https://api.openai.com/v1/chat/completions",
+  "openaiApiKey": "${OPENAI_API_KEY}",
+  "evms": [
+    {
+      "tokenAddress": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+      "porAddress": "0x073671aE6EAa2468c203fDE3a79dEe0836adF032",
+      "proxyAddress": "0x696A180a2A1F5EAC7014D4ab4891CCB4184275fF",
+      "balanceReaderAddress": "0x4b0739c94C1389B55481cb7506c62430cA7211Cf",
+      "messageEmitterAddress": "0x1d598672486ecB50685Da5497390571Ac4E93FDc",
+      "dcaControllerAddress": "${DCA_CONTROLLER_ADDRESS}",
+      "btcUsdPriceFeedAddress": "0x4aDC67696bA383F43DD60A9e78F2C97Fbbfc7cb1",
+      "chainSelectorName": "ethereum-testnet-sepolia-base-1",
+      "gasLimit": "500000"
+    }
+  ]
+}
