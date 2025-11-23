@@ -12,3 +12,4 @@ ETHGLOBAL_CHAINLINK_SUBMISSION.md
 config.production.json
 scripts
 frontend/dist-single/
+docs
