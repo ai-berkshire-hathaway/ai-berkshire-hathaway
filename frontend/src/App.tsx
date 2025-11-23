@@ -1,5 +1,9 @@
-import { Dashboard } from './components/Dashboard';
+import { EnhancedDCADashboard } from './components/EnhancedDCADashboard';
 
 export function App() {
-  return <Dashboard />;
+  return (
+    <div className="App">
+      <EnhancedDCADashboard />
+    </div>
+  );
 }

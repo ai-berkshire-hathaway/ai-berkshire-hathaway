@@ -12,6 +12,14 @@ export const BASE_TRADER_PRIVATE_KEY =
 export const ARC_DCA_CONTROLLER_ADDRESS =
   process.env.ARC_DCA_CONTROLLER_ADDRESS || "0xYourArcDcaController";
 
+// Chainlink BTC/USD price feeds on different networks
+export const CHAINLINK = {
+  // Base Mainnet BTC/USD price feed
+  BASE_MAINNET_BTC_USD: "0x64c911996D3c6aC71f9b455B1E8E7266BcbD848F",
+  // Base Sepolia BTC/USD price feed (testnet)
+  BASE_SEPOLIA_BTC_USD: "0x4aDC67696bA383F43DD60A9e78F2C97Fbbfc7cb1",
+};
+
 export const arcProvider = new ethers.JsonRpcProvider(ARC_RPC_URL);
 export const baseProvider = new ethers.JsonRpcProvider(BASE_RPC_URL);
 
@@ -19,12 +27,25 @@ export const arcWallet = new ethers.Wallet(ARC_PRIVATE_KEY, arcProvider);
 export const baseTraderWallet = new ethers.Wallet(BASE_TRADER_PRIVATE_KEY, baseProvider);
 
 // Minimal ABI fragments for the events/methods we use
+export const BaseDcaAbi = [
+  "event DCARequested(uint256 indexed planId, uint256 indexed thresholdIndex, uint256 usdcAmount, int256 price, uint256 updatedAt)",
+  "event PriceUpdated(int256 price, uint256 updatedAt, uint80 roundId)",
+  "event ReserveProofGenerated(uint256 indexed proofId, uint256 timestamp, uint256 usdcBalance, uint256 totalInvested, int256 btcPrice, uint256 portfolioValueUsd)",
+  "function updatePriceAndMaybeInvest() external",
+  "function generateReserveProof(uint256 totalInvestedUsd) external",
+  "function getCurrentPrice() external view returns (int256 price, uint256 updatedAt)",
+  "function lastPrice() view returns (int256)",
+  "function lastUpdatedAt() view returns (uint256)",
+  "function getLatestReserveProof() external view returns (tuple(uint256 timestamp, uint256 usdcBalance, uint256 totalInvested, int256 btcPrice, uint256 portfolioValueUsd))",
+];
+
+// Legacy ABI for Arc-based controller (deprecated)
 export const ArcDcaAbi = [
   "event DCARequested(uint256 indexed planId, uint256 indexed thresholdIndex, uint256 usdcAmount, int64 price int32 expo, uint64 publishTime)",
   "function updatePriceAndMaybeInvest(bytes[] priceUpdateData) external payable",
   "function lastPrice() view returns (int64)",
   "function lastExpo() view returns (int32)",
-  "function lastPublishTime() view returns (uint64)"
+  "function lastPublishTime() view returns (uint64)",
 ];
 
 // Arc Testnet chain (USDC gas L1)
@@ -55,6 +76,10 @@ export const BASE_SEPOLIA = {
     tokenMessenger: "0x8FE6B999Dc680CcFDD5Bf7EB0974218be2542DAA",
     messageTransmitter: "0xE737e5cEBEEBa77EFE34D4aa090756590b1CE275",
   },
+  // Chainlink BTC/USD price feed (testnet)
+  chainlinkBtcUsd: CHAINLINK.BASE_SEPOLIA_BTC_USD,
+  // DCA Controller contract (to be deployed)
+  dcaController: process.env.BASE_SEPOLIA_DCA_CONTROLLER_ADDRESS || "0xYourBaseSepoliaDcaController",
 };
 
 // Base Mainnet 侧，用于真实买 BTC（cbBTC）
@@ -68,13 +93,8 @@ export const BASE_MAINNET = {
   cbBtc: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
   // Aerodrome Slipstream SwapRouter (Base) —— 用于 USDC -> cbBTC 交换  [oai_citation:6‡Base Explorer](https://basescan.org/address/0xbe6d8f0d05cc4be24d5167a3ef062215be6d18a5?utm_source=chatgpt.com)
   dexRouter: "0xbe6d8f0d05CC4BE24D5167a3EF062215BE6D18a5",
-};
-
-// Pyth BTC/USD price feed ID（所有 EVM 上共用的 priceId）  [oai_citation:7‡Pyth Network Docs](https://docs.pyth.network/price-feeds/core/fetch-price-updates?utm_source=chatgpt.com)
-export const PYTH = {
-  // BTC / USD price ID
-  BTC_USD_PRICE_ID:
-    "0xe62df6c8b4a85fe1a67db44dc12de5db330f7ac66b72dc658afedf0f4a415b43",
-  // Hermes API Endpoint  [oai_citation:8‡docs.euler.finance](https://docs.euler.finance/developers/evk/interacting-with-vaults?utm_source=chatgpt.com)
-  HERMES_URL: "https://hermes.pyth.network/v2/updates/price/latest",
+  // Chainlink BTC/USD price feed
+  chainlinkBtcUsd: CHAINLINK.BASE_MAINNET_BTC_USD,
+  // DCA Controller contract (to be deployed)
+  dcaController: process.env.BASE_DCA_CONTROLLER_ADDRESS || "0xYourBaseDcaController",
 };
