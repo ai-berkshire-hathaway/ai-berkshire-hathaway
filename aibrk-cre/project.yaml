@@ -31,7 +31,5 @@ ai-dca-settings:
 # ==========================================================================
 production-settings:
   rpcs:
-    - chain-name: ethereum-testnet-sepolia
-      url: https://ethereum-sepolia.gateway.tatum.io
-    - chain-name: ethereum-testnet-sepolia-base-1
-      url: https://sepolia.base.org
+    - chain-name: base-mainnet-base-1
+      url: https://mainnet.base.org

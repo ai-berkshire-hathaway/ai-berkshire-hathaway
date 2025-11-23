@@ -36,8 +36,8 @@ ai-dca-settings:
 # ==========================================================================
 production-settings:
   user-workflow:
-    workflow-name: "my-workflow-production"
+    workflow-name: "ai-berkshire-hathaway-production"
   workflow-artifacts:
-    workflow-path: "./main.ts"
+    workflow-path: "./enhanced-main.ts"
     config-path: "./config.production.json"
     secrets-path: ""
