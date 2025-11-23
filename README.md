@@ -1,5 +1,7 @@
 # AI Berkshire Hathaway
 
+![AI Berkshire Hathaway](images/20251123-200956.png)
+
 AI Berkshire Hathaway.INC  eth
 
 AI Berkshire Hathaway is an AI-powered, community-driven, onchain version of Berkshire Hathaway.
