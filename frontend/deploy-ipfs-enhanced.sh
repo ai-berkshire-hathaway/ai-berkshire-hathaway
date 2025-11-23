@@ -15,9 +15,9 @@ fi
 echo "📦 安装依赖..."
 pnpm install
 
-# 构建项目
-echo "🔨 构建项目..."
-pnpm run build
+# 构建项目 (IPFS 优化版本)
+echo "🔨 构建项目 (IPFS 优化)..."
+pnpm run build:ipfs
 
 # 检查构建是否成功
 if [ ! -d "dist" ]; then

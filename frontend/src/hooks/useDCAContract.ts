@@ -19,21 +19,21 @@ export function useDCAContract(): DCAContractData {
   const [amounts, setAmounts] = useState<bigint[]>([]);
   const [executed, setExecuted] = useState<boolean[]>([]);
 
-  // 获取当前价格
+  // Get current price
   const { data: priceData, error: priceError } = useReadContract({
     address: DCA_CONTRACT_ADDRESS,
     abi: DCA_CONTRACT_ABI,
     functionName: 'getCurrentPrice',
   });
 
-  // 获取合约所有者
+  // Get contract owner
   const { data: owner, error: ownerError } = useReadContract({
     address: DCA_CONTRACT_ADDRESS,
     abi: DCA_CONTRACT_ABI,
     functionName: 'owner',
   });
 
-  // 获取合约 USDC 余额
+  // Get contract USDC balance
   const { data: contractBalance, error: balanceError } = useReadContract({
     address: USDC_CONTRACT_ADDRESS,
     abi: USDC_CONTRACT_ABI,
@@ -41,7 +41,7 @@ export function useDCAContract(): DCAContractData {
     args: [DCA_CONTRACT_ADDRESS],
   });
 
-  // 获取阈值数组 (假设有3个阈值)
+  // Get threshold array (assuming 3 thresholds)
   const { data: thresholdData } = useReadContracts({
     contracts: [
       {
@@ -65,7 +65,7 @@ export function useDCAContract(): DCAContractData {
     ],
   });
 
-  // 获取金额数组
+  // Get amount array
   const { data: amountData } = useReadContracts({
     contracts: [
       {
@@ -89,7 +89,7 @@ export function useDCAContract(): DCAContractData {
     ],
   });
 
-  // 获取执行状态数组
+  // Get execution status array
   const { data: executedData } = useReadContracts({
     contracts: [
       {
@@ -113,7 +113,7 @@ export function useDCAContract(): DCAContractData {
     ],
   });
 
-  // 处理数据
+  // Process data
   useEffect(() => {
     if (thresholdData) {
       const thresholdValues = thresholdData
