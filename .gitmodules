@@ -1,0 +1,9 @@
+[submodule "contracts/dca/lib/chainlink-brownie-contracts"]
+	path = contracts/dca/lib/chainlink-brownie-contracts
+	url = https://github.com/smartcontractkit/chainlink-brownie-contracts
+[submodule "contracts/dca/lib/ccip"]
+	path = contracts/dca/lib/ccip
+	url = https://github.com/smartcontractkit/ccip
+[submodule "contracts/dca/lib/openzeppelin-contracts"]
+	path = contracts/dca/lib/openzeppelin-contracts
+	url = https://github.com/openzeppelin/openzeppelin-contracts
