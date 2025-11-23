@@ -6,9 +6,11 @@ Simple. Open. Social.
 
 AI Berkshire Hathaway is for every one.
 
-An intelligent, AI-driven dollar-cost-averaging (DCA) strategy that combines **Chainlink CRE workflows**, **multi-source price feeds**, **OpenAI market analysis**, and **Base mainnet execution** to automate BTC accumulation with unprecedented transparency and sophistication.
 
-## 1. What Is AI Berkshire Hathaway
+
+## 1. What is aiberkshirehathaway.eth
+
+An intelligent, AI-driven dollar-cost-averaging (DCA) strategy that combines **Chainlink CRE workflows**, **multi-source price feeds**, **OpenAI market analysis**, and **Base mainnet execution** to automate BTC accumulation with unprecedented transparency and sophistication.
 
 ### Goal
 
@@ -391,6 +393,7 @@ Run locally during development and testing, then migrate to Chainlink DON for pr
 - **Advanced AI Models**: Custom fine-tuned models for crypto
 - **Cross-Chain Expansion**: Multi-chain DCA strategies
 - **Institutional Features**: Large-scale portfolio management
+
 
 
 
