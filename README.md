@@ -397,6 +397,47 @@ Run locally during development and testing, then migrate to Chainlink DON for pr
 - **Advanced AI Models**: Custom fine-tuned models for crypto
 - **Cross-Chain Expansion**: Multi-chain DCA strategies
 - **Institutional Features**: Large-scale portfolio management
+- **Agent to Agent Gateway**: Scalable A2A Gateway
+
+## 10. System Architecture
+
+The following diagram shows the comprehensive ACP (Advanced Chainlink Protocol) architecture that represents our future roadmap for a fully distributed, multi-agent AI system:
+
+![ACP Architecture](images/acp-architecture-external.drawio.png)
+
+### Architecture Components
+
+**Core AI Agents:**
+- **Buyer Agent**: Specialized for market entry decisions and purchase execution
+- **Seller Agent**: Handles profit-taking and risk management strategies  
+- **Evaluator Agent**: Continuous market analysis and strategy optimization
+
+**Data Infrastructure:**
+- **PostgreSQL**: Historical data storage and analytics
+- **Redis Cache**: High-performance data caching and session management
+- **Kafka Queue**: Real-time message processing and event streaming
+
+**AI & Analysis Layer:**
+- **OpenAI Integration**: GPT-4 powered market analysis
+- **LangChain**: Advanced AI workflow orchestration
+- **Grok**: Alternative AI model for diverse perspectives
+
+**Monitoring & Communication:**
+- **Telegram Integration**: Real-time alerts and notifications
+- **X API**: Social sentiment analysis and community engagement
+- **Comprehensive Monitoring**: System health and performance tracking
+
+**Blockchain Integration:**
+- **ACP Protocol**: Advanced Chainlink Protocol coordination
+- **Multi-Chain Support**: Cross-chain DCA execution via CCIP
+- **Smart Contract Automation**: Fully automated trading execution
+
+This architecture represents the evolution from our current single-agent system to a sophisticated multi-agent ecosystem capable of handling complex trading strategies across multiple chains with enhanced AI capabilities.
+
+
+
+
+
 
 
 
