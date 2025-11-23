@@ -2,19 +2,21 @@
 
 ![AI Berkshire Hathaway](images/20251123-200956.png)
 
-AI Berkshire Hathaway.INC  eth
+AI Berkshire Hathaway is an AI-managed, community-powered investment system designed for the multi-chain world.
 
-AI Berkshire Hathaway is an AI-powered, community-driven, onchain version of Berkshire Hathaway.
- 
 Simple. Open. Social.
-
-AI Berkshire Hathaway is for every one.
-
 
 
 ## 1. What is aiberkshirehathaway.eth
 
-An intelligent, AI-driven dollar-cost-averaging (DCA) strategy that combines **Chainlink CRE workflows**, **multi-source price feeds**, **OpenAI market analysis**, and **Base mainnet execution** to automate BTC accumulation with unprecedented transparency and sophistication.
+AI Berkshire Hathaway is for everyone.
+
+The idea is simple: anyone can suggest an investment strategy to the AI Berkshire Hathaway agent from several interface such as X.
+
+Imagine a user says: “This is a buy-the-dip moment. When Bitcoin hits 85k, 82k, and 79k, deploy USDC at each level.”
+AI Berkshire Hathaway takes that signal, checks the price bands, validates risk parameters, and—when conditions are met—executes automatically on-chain.
+
+At ETHGlobal Buenos Aires, we deploy an intelligent, AI-driven dollar-cost-averaging (DCA) strategy that combines **Chainlink CRE workflows**, **multi-source price feeds**, **OpenAI market analysis**, and **Base mainnet execution** to automate BTC accumulation with unprecedented transparency and sophistication.
 
 ### Goal
 
@@ -27,7 +29,7 @@ Automate BTC accumulation with an AI-powered, transparent, onchain-first strateg
 * **Base Mainnet Integration**: Real BTC purchases on Base using USDC → cbBTC swaps
 * **Flexible Deployment**: Can run locally or on Chainlink DON for maximum reliability
 
-### What the frontend shows
+### Frontend
 
 * **Real-time Multi-Source Prices**: Live BTC prices from Chainlink, CoinGecko, and Binance
 * **AI Analysis Dashboard**: Current AI confidence, market sentiment, and investment recommendations
@@ -433,6 +435,7 @@ The following diagram shows the comprehensive ACP (Advanced Chainlink Protocol) 
 - **Smart Contract Automation**: Fully automated trading execution
 
 This architecture represents the evolution from our current single-agent system to a sophisticated multi-agent ecosystem capable of handling complex trading strategies across multiple chains with enhanced AI capabilities.
+
 
 
 
