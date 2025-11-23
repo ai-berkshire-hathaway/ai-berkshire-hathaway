@@ -1,0 +1,23 @@
+{
+  "name": "arc-to-base-bridge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@circle-fin/adapter-viem-v2": "^1.1.1",
+    "@circle-fin/bridge-kit": "^1.1.2",
+    "dotenv": "^17.2.3",
+    "tsx": "^4.20.6",
+    "viem": "^2.39.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "typescript": "^5.9.3"
+  }
+}
