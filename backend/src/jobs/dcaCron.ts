@@ -1,6 +1,5 @@
 import { Contract } from "ethers";
 import { ArcDcaAbi, ARC_DCA_CONTROLLER_ADDRESS, arcWallet } from "../config/chains";
-import axios from "axios";
 import { bridgeUsdcArcToBaseSepolia } from "../services/circleCctp";
 import { fetchPythPriceUpdateData } from "../services/pyth";
 
@@ -34,24 +33,6 @@ export async function startDcaCron() {
   };
 
   loop();
-}
-
-/**
- * Placeholder for getting Pyth price update data.
- * Replace with real Pyth SDK / HTTP call.
- */
-async function fetchPythPriceUpdateData(): Promise<string[]> {
-  // Example: call a Pyth "price updates" endpoint and get serialized priceFeedUpdateData
-  // For now, return an empty array so the contract just reads cached price.
-  // You can add real logic here later.
-  try {
-    // const res = await axios.get("https://your-pyth-endpoint");
-    // return res.data.priceUpdateData;
-    return [];
-  } catch (err) {
-    console.error("[DCA Cron] Failed to fetch Pyth data, using []:", err);
-    return [];
-  }
 }
 
 export async function runDcaOnce() {

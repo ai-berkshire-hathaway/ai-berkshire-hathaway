@@ -22,9 +22,12 @@ if (!PRIVATE_KEY) {
   throw new Error("PRIVATE_KEY is required in environment for CCTP");
 }
 
-const account = privateKeyToAccount(
+// Normalize PRIVATE_KEY into a 0x-prefixed hex string with the correct template literal type
+const PRIVATE_KEY_HEX = (
   PRIVATE_KEY.startsWith("0x") ? PRIVATE_KEY : `0x${PRIVATE_KEY}`
-);
+) as `0x${string}`;
+
+const account = privateKeyToAccount(PRIVATE_KEY_HEX);
 
 // Arc Testnet wallet client
 const arcClient = createWalletClient({
@@ -122,7 +125,7 @@ export async function burnUsdcOnArc(
         amount,
         BASE_SEPOLIA.cctp.domain, // destinationDomain
         DESTINATION_ADDRESS_BYTES32,
-        ARC_TESTNET.usdcErc20,
+        ARC_TESTNET.usdcErc20 as `0x${string}`,
         DESTINATION_CALLER_BYTES32,
         maxFee,
         1000, // minFinalityThreshold (<=1000 => Fast Transfer)  [oai_citation:12‡Circle Developer Docs](https://developers.circle.com/cctp/transfer-usdc-on-testnet-from-ethereum-to-avalanche)
