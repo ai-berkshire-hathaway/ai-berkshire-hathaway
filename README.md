@@ -1,8 +1,12 @@
 # AI Berkshire Hathaway
 
+AI Berkshire Hathaway.INC  eth
+
 AI Berkshire Hathaway is an AI-powered, community-driven, onchain version of Berkshire Hathaway.
  
 Simple. Open. Social.
+
+AI Berkshire Hathaway is for every one.
 
 An intelligent, AI-driven dollar-cost-averaging (DCA) strategy that combines **Chainlink CRE workflows**, **multi-source price feeds**, **OpenAI market analysis**, and **Base mainnet execution** to automate BTC accumulation with unprecedented transparency and sophistication.
 
@@ -389,6 +393,7 @@ Run locally during development and testing, then migrate to Chainlink DON for pr
 - **Advanced AI Models**: Custom fine-tuned models for crypto
 - **Cross-Chain Expansion**: Multi-chain DCA strategies
 - **Institutional Features**: Large-scale portfolio management
+
 
 
 
