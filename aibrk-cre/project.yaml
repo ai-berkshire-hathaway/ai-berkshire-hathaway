@@ -18,10 +18,20 @@
 staging-settings:
   rpcs:
     - chain-name: ethereum-testnet-sepolia
-      url: https://base-sepolia-public.nodies.app
+      url: https://ethereum-sepolia.gateway.tatum.io
+    - chain-name: ethereum-testnet-sepolia-base-1
+      url: https://sepolia.base.org
+
+# ==========================================================================
+ai-dca-settings:
+  rpcs:
+    - chain-name: ethereum-testnet-sepolia-base-1
+      url: https://sepolia.base.org
 
 # ==========================================================================
 production-settings:
   rpcs:
     - chain-name: ethereum-testnet-sepolia
-      url: https://base-sepolia-public.nodies.app
+      url: https://ethereum-sepolia.gateway.tatum.io
+    - chain-name: ethereum-testnet-sepolia-base-1
+      url: https://sepolia.base.org

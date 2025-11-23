@@ -22,6 +22,15 @@ staging-settings:
     workflow-path: "./main.ts"
     config-path: "./config.staging.json"
     secrets-path: ""
+
+# AI Berkshire Hathaway Integration
+ai-dca-settings:
+  user-workflow:
+    workflow-name: "ai-berkshire-hathaway-dca"
+  workflow-artifacts:
+    workflow-path: "./enhanced-main.ts"
+    config-path: "./config.ai-dca.json"
+    secrets-path: ""
     
 
 # ==========================================================================

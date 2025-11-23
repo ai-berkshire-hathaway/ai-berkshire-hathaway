@@ -18,5 +18,11 @@
       "chainSelectorName": "ethereum-testnet-sepolia-base-1",
       "gasLimit": "500000"
     }
-  ]
+  ],
+  "dcaSettings": {
+    "usdcAmount": 100000000,
+    "priceThresholds": [85000, 82000, 79000],
+    "maxSlippage": 0.005,
+    "minConfidence": 0.7
+  }
 }
